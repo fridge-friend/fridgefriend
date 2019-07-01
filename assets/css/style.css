@@ -1,0 +1,68 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+#navbar {
+    text-align: center;
+    font-size: 55px;
+    height: 50px;
+}
+
+
+.body {
+    background-size: contain;
+}
+
+#container {
+    margin: 200px;
+    padding: 80px;
+    overflow: auto;
+   
+    
+}
+
+.card {
+    float: left;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.page-footer {
+   
+    height: 75px;
+    clear: both;
+    padding: 10px;
+    text-align: center;
+}
+      
+
+@media only screen and (max-width:980px) {
+    #navbar {
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    #container {
+        max-width: 100%;
+        margin: 10px;
+    }
+    #navbar {
+        max-width: 100%;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #navbar {
+        max-width: 100%;
+        margin: 5px;    
+    }
+    #container {
+        max-width: 100%;
+        margin: 5px;
+    }
+}
