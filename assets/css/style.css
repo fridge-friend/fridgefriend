@@ -19,14 +19,20 @@
 }
 
 #container {
+    
     margin: 200px;
     padding: 80px;
     overflow: auto;
    
-    
 }
 
+
+#search {
+    margin: 10px;
+    background: white;
+}
 .card {
+    display: none;
     float: left;
     margin: 20px;
     width: 200px;
