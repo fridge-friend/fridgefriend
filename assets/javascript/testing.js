@@ -24,31 +24,31 @@ $(document).ready(function () {
             // shows object in console.log
             console.log("EDAMAM: ")
             console.log(response)
-        
 
-            
+
+
             var recipeSearch = JSON.stringify(response.hits)
             console.log(recipeSearch)
-            
+
             //For loop that goes through all the recipes
             for (var i = 0; i < recipeSearch.length; i++) {
                 //Array of recipes
-                var recipesArr= response.hits[i].recipe
+                var recipesArr = response.hits[i].recipe
                 //Variable for the name of recipe
-                var recipesName =recipesArr.label
-                console.log("Recipe Name ---------------") 
-                console.log(recipesName) 
+                var recipesName = recipesArr.label
+                console.log("Recipe Name ---------------")
+                console.log(recipesName)
 
                 //For loop that goes through the ingredients of each recipe
-                $("#recipeContainer").append("<div>"+recipesName+"</div>");
+                $("#recipeContainer").append("<div>" + recipesName + "</div>");
                 for (var g = 0; g < recipesArr.ingredients.length; g++) {
                     var recipesIngredients = recipesArr.ingredients[g].text
-                    $("#recipeContainer").append("<div>"+recipesIngredients+"</div>");
+                    $("#recipeContainer").append("<div>" + recipesIngredients + "</div>");
                     console.log(recipesIngredients)
                 }
             }
 
-        
+
             // returns name of recipe in console log
             console.log(JSON.stringify(response.hits[1].recipe.label))
             var recipeName = JSON.stringify(response.hits[1].recipe.label)
@@ -76,26 +76,32 @@ $(document).ready(function () {
             //Price of the product
             console.log(JSON.stringify(response.items[0].msrp))
             //Link to the URL of the product
-            for (var j = 0; j <= 2; j++) {
-                var cartLink = response.items[j].addToCartUrl
-                var $newButton = $('<button>')
-                $newButton.attr(response.items[0].name)
-                $newButton.addClass("cart-link-button")
-                // $newButton.href(cartLink)
-                $newButton.text(response.items[j].name)
-                $("#walmartContainer").append($newButton)
+            for (var j = 0; j <= 5; j++) {
 
-                $(".cart-link-button").on("click", function(){
-                    alert(response.items[j].addToCartUrl)
-                })
+                //If available online is tru add the Url
 
-                
+                if (response.items[j].availableOnline) {
+
+                    var $newButton = $('<button>')
+
+                    var cartLink = response.items[j].addToCartUrl
+                    console.log("Links-----")
+                    console.log(cartLink)
+                    $newButton.attr('href', cartLink);
+
+                    $newButton.addClass("walmart-button")
+                    $newButton.text(response.items[j].name)
+
+                    $("#walmartContainer").append($newButton)
+                }
+
+
 
             }
-            console.log(JSON.stringify(response.items[0].addToCartUrl))
 
- 
- 
+
+
+
 
         });
 
