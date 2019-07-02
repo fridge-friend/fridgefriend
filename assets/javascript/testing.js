@@ -34,12 +34,21 @@ $(document).ready(function () {
             for (var i = 0; i < recipeSearch.length; i++) {
                 //Array of recipes
                 var recipesArr = response.hits[i].recipe
+
+                //Recipe Image
+                var recipesImage = response.hits[i].recipe.image
+                var $newImage = $("<img>");
+                $newImage.attr("src", recipesImage);
+                console.log("Recipe Image ---------------")
+                console.log(recipesImage)
+                
                 //Variable for the name of recipe
                 var recipesName = recipesArr.label
                 console.log("Recipe Name ---------------")
                 console.log(recipesName)
 
                 //For loop that goes through the ingredients of each recipe
+                $("#recipeContainer").append($newImage)
                 $("#recipeContainer").append("<div>" + recipesName + "</div>");
                 for (var g = 0; g < recipesArr.ingredients.length; g++) {
                     var recipesIngredients = recipesArr.ingredients[g].text
@@ -71,12 +80,16 @@ $(document).ready(function () {
             console.log(response)
             //Image of the product
             console.log(JSON.stringify(response.items[0].thumbnailImage))
+
             //Name of the product
             console.log(response.items[0].name)
             //Price of the product
             console.log(JSON.stringify(response.items[0].msrp))
             //Link to the URL of the product
+
+            //For loop that search for the URL inside Walmart API
             for (var j = 0; j <= 5; j++) {
+
 
                 //If available online is tru add the Url
 
@@ -84,6 +97,7 @@ $(document).ready(function () {
 
                     var $newButton = $('<button>')
 
+                    //Link to cart 
                     var cartLink = response.items[j].addToCartUrl
                     console.log("Links-----")
                     console.log(cartLink)
@@ -92,14 +106,26 @@ $(document).ready(function () {
                     $newButton.addClass("walmart-button")
                     $newButton.text(response.items[j].name)
 
-                    $("#walmartContainer").append($newButton)
+                    //Walmart Image
+                    var walmartImg = response.items[j].thumbnailImage
+                    var $newImage = $("<img>")
+                    $newImage.attr(walmartImg)
+                    console.log("Image-----")
+                    console.log(walmartImg)
+
+                    $("#walmartContainer").html($newImage)
+                    $("#walmartContainer").html($newButton)
                 }
 
-
+                //when you click the button display it links to the page on wallmart
+                $(".walmart-button").on("click",function(event){
+                    window.location = $(this).attr('href')
+                })
 
             }
 
 
+        
 
 
 
