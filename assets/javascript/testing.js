@@ -81,9 +81,13 @@ $(document).ready(function () {
                 var $newButton = $('<button>')
                 $newButton.attr(response.items[0].name)
                 $newButton.addClass("cart-link-button")
-                $newButton.href(cartLink)
+                // $newButton.href(cartLink)
                 $newButton.text(response.items[j].name)
                 $("#walmartContainer").append($newButton)
+
+                $(".cart-link-button").on("click", function(){
+                    alert(response.items[j].addToCartUrl)
+                })
 
                 
 
