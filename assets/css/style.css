@@ -1,5 +1,78 @@
-/* Backgroud color */
-/* Create padding for Searchbar */
-.searchBar{
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+#header {
+    text-align: center;
+    font-size: 55px;
+    height: 50px;
+    margin: 50px;
+}
+
+
+.body {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container {
+    
+    margin: 200px;
+    padding: 80px;
+    overflow: auto;
+   
+}
+
+
+#search {
+    margin: 10px;
+    background: white;
+}
+.card {
+    
+    float: left;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.page-footer {
+    display: none;
+    height: 75px;
+    clear: both;
     padding: 10px;
+    text-align: center;
+}
+      
+
+@media only screen and (max-width:980px) {
+    #navbar {
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    #container {
+        max-width: 100%;
+        margin: 10px;
+    }
+    #navbar {
+        max-width: 100%;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #navbar {
+        max-width: 100%;
+        margin: 5px;    
+    }
+    #container {
+        max-width: 100%;
+        margin: 5px;
+    }
 }

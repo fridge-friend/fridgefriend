@@ -1,5 +1,5 @@
 
-jQuery.ajaxPrefilter(function(options) {
+jQuery.ajaxPrefilter(function (options) {
     if (options.crossDomain && jQuery.support.cors) {
         options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
     }
@@ -15,7 +15,7 @@ $(document).ready(function () {
     //#API URL= EDAMAM
     var queryURLEdamam = "https://api.edamam.com/search?q="+ UserInput +"&app_id=26194528&app_key=be9ed2ffac6143f2a60323088693f678&"
 
-
+    // cards will go inside of this array
     //TO DOS
     //Store user data
     //Search in API of Edamame the ingredients
@@ -39,3 +39,28 @@ $(document).ready(function () {
         console.log(response)
     });
 });
+
+
+
+// Search button //
+function start() {
+
+    $("#search").remove();
+    for (var i = 0; i < cards.length; i++) {
+        card.append("<h2>" + cards[i].image + "</h2>");
+    }
+}
+
+
+//places cards on the page//
+
+
+card.append()
+$("#search").on("click", function () {
+    console.log("cards should replace start button");
+    $("#container").css("display", "block");
+
+});
+
+
+
