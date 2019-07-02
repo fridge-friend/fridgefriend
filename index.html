@@ -18,20 +18,38 @@
 
 <body class="body" background="assets/images/fridge2.png">
     <!-- ~~~~~~~~~~~~TODO: Make a navbar~~~~~~~~~~~~~~ -->
-    <nav>
-        <div id="navbar" style="font-family: 'DM Serif Display', serif;">
+    
+        <header id="header" style="font-family: 'DM Serif Display', serif;">
             Fridge Friend
-            <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">search</i></a></li>
+        </header>
+        
+    
 
-            </ul>
-        </div>
-    </nav>
+ 
 
     <!-- ~~~~~~~~~~END TODO: Make a navbar~~~~~~~~~~~~ -->
 
+    <nav>
+
+            <div class="nav-wrapper">
+                <form class="search-form">
+                    <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+            </div>
+    
+        </nav>
+    
+
+
+        <div class="row">
+                <div class="col s12"><h5>Instructions</h5></div>
+                <div class="col s12"><h5>Type ingredient to find recipes to make!</h5></div>
     <div id="container">
-        <button id="search">Search</button>
+        
         <div id="card"></div>
         <div class="row">
             <div class="col-3-sm-6">
@@ -91,28 +109,12 @@
     </div>
     </div>
     <!-- ~~~~~~~~~~~~TODO: Make a searchbar~~~~~~~~~~~~~~ -->
-    <nav>
-
-        <div class="nav-wrapper">
-            <form class="search-form">
-                <div class="input-field">
-                    <input id="search" type="search" required>
-                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                    <i class="material-icons">close</i>
-                </div>
-            </form>
-        </div>
-
-    </nav>
-
+   
 
     <!-- ~~~~~~~~~~END TODO: Make a searchbar~~~~~~~~~~~~ -->
 
     <!-- TODO: New Div: Instruction -->
-    <div class="container instructionsBox">
-        <div class="row">
-            <div class="col s12">Instructions</div>
-            <div class="col s12">Type ingredient to find recipes to make!</div>
+   
 
 
 
@@ -143,6 +145,7 @@
     <!-- FOR PERSONAL JS: -->
     <!-- Not minified JavaScript -->
     <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/testing.js"></script>
 </body>
 
 </html>
