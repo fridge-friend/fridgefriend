@@ -12,26 +12,16 @@
 
     <!-- FOR PERSONAL CSS: -->
     <!-- Not minified CSS -->
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
     <!-- ~~~~~~~~~~~~TODO: Make a searchbar~~~~~~~~~~~~~~ -->
-    <nav>
-
-        <div class="nav-wrapper">
-            <form class="search-form">
-                <div class="input-field">
-                    <input id="search" type="search" required>
-                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                    <i class="material-icons">close</i>
-                </div>
-            </form>
-        </div>
-
-    </nav>
-
+    <form for="ingredient-form">
+        <label for="ingredient-input" class="active"> ingredient</label>
+        <input type="text" id="ingredient-input">
+    </form>
 
     <!-- ~~~~~~~~~~END TODO: Make a searchbar~~~~~~~~~~~~ -->
 
@@ -45,10 +35,14 @@
         <!-- END TODO: INSTRUCTIONS -->
 
         <!-- TODO: New Div: Container-->
-        <div class="container recipes">
+        <div id="recipeContainer">
             <!-- Create empty container Div to hold all of our recipes upon searching. -->
         </div>
         <!-- END TODO: CONTAINER -->
+
+        <div id="walmartContainer">
+            <!-- Create empty container Div to hold all of our recipes upon searching. -->
+        </div>
 
 
 
