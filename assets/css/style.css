@@ -1,15 +1,24 @@
-.container {
-    margin: 100px;
-    border: solid;
+.styleCard{
+    margin:.5rem 2rem 1rem 0;
 }
 
-.card {
-    width: 100px;
-    height: 400px;
-    margin: .3rem 0 1rem 0;
-}
 
-.card-image{
-    width: 200px;
-    height: 200px;
-}
+#ingredient-form {
+    margin: 0px auto;
+    float: none;
+    width: 1075px;
+ }
+ #ingredientBox{
+    margin-top: 20px; 
+ }
+ 
+ #landingGif{
+    width: 100%;
+    margin: 0px auto;
+    float: none;
+ }
+ .instructionsText{
+    margin: 0px auto;
+    float: none;
+    text-align: center;
+ }

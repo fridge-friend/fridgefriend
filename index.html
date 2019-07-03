@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Search Band Shows</title>
+    <title>Fridge Friend</title>
 
     <!-- FOR MATERIALIZE CSS: -->
     <!-- Compiled and minified CSS -->
@@ -19,56 +19,61 @@
 <body>
 
     <!-- ~~~~~~~~~~~~TODO: Make a searchbar~~~~~~~~~~~~~~ -->
-    <form id="ingredient-form">
-        <label for="ingredient-input">Ingredient</label>
-        <input type="text" id="ingredient-input">
-    </form>
+    <div class="row" id="ingredientBox">
+        <form class="col s6" id="ingredient-form">
+            <label for="ingredient-input">Ingredient</label>
+            <input type="text" id="ingredient-input">
+        </form>
+
+    </div>
+
 
 
     <!-- ~~~~~~~~~~END TODO: Make a searchbar~~~~~~~~~~~~ -->
 
     <!-- TODO: New Div: Instruction -->
     <div class="container instructionsBox">
-        <div class="row">
-            <div class="col s12">Instructions</div>
-            <div class="col s12">Type ingredient to find recipes to make!</div>
+        <div class="row instructionsText">
+            <div class="col s12">Type in an ingredient to find recipes to match!</div>
 
         </div>
         <!-- END TODO: INSTRUCTIONS -->
 
         <!-- TODO: New Div: Container-->
-        <div class="container">
-            <div class="row" id="recipeContainer">
-
+        <div class="row">
+            <div class="container" id="recipeContainer">
+                <img id="landingGif"
+                    src="https://media1.giphy.com/media/oFVhE047UQsLK/giphy.gif?cid=790b76115d1d05956339507a7744eda7&rid=giphy.gif"
+                    alt="">
                 <!-- Create empty container Div to hold all of our recipes upon searching. -->
             </div>
         </div>
 
-
-
-        <!-- END TODO: CONTAINER -->
-
-        <div class="container" id="walmartContainer">
-
-        </div>
+    </div>
 
 
 
-        <!-- FOR JQUERY: -->
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- END TODO: CONTAINER -->
 
-        <!-- FOR MATERIALIZE CSS: -->
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <div class="container" id="walmartContainer">
 
-        <!-- FOR PERSONAL JS: -->
-        <!-- Not minified JavaScript -->
-        <script src="assets/javascript/testing.js"></script>
+    </div>
+
+
+
+    <!-- FOR JQUERY: -->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- FOR PERSONAL JS: -->
+    <!-- Not minified JavaScript -->
+    <script src="assets/javascript/testing.js"></script>
 </body>
 
 </html>

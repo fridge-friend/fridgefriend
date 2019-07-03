@@ -30,14 +30,18 @@ $(document).ready(function () {
             var recipeSearch = JSON.stringify(response.hits)
             console.log(recipeSearch)
 
+            $("#recipeContainer").empty();
+            $("#walmartContainer").empty();
             //For loop that goes through all the recipes
             for (var i = 0; i < recipeSearch.length; i++) {
                 //Card div that has all the content
                 var $newDivCard = $("<div>");
                 $newDivCard.addClass("card");
                 $newDivCard.addClass("styleCard");
-                $newDivCard.addClass("col s4 m4");
-                
+                $newDivCard.addClass("col s3");
+                $newDivCard.addClass("m3");
+
+
 
                 //Array of recipes
                 var recipesArr = response.hits[i].recipe
@@ -46,7 +50,7 @@ $(document).ready(function () {
                 var recipesImage = response.hits[i].recipe.image
                 var $newImage = $("<img>");
                 $newImage.attr("src", recipesImage);
-              
+
 
                 //Variable for the name of recipe
                 var $newTitle = $("<span>")
@@ -75,8 +79,8 @@ $(document).ready(function () {
 
                     //Search the ingredients on the Array
                     var recipesIngredients = recipesArr.ingredients[g].text
-        
-                    
+
+
                     //We create a div to show each ingredient on a list
                     var $ingredientDiv = $("<div>")
                     $ingredientDiv.append(recipesIngredients);
