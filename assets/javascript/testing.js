@@ -32,6 +32,12 @@ $(document).ready(function () {
 
             //For loop that goes through all the recipes
             for (var i = 0; i < recipeSearch.length; i++) {
+                //Card div that has all the content
+                var $newDivCard = $("<div>");
+                $newDivCard.addClass("row");
+                $newDivCard.addClass("col s12 m6");
+                $newDivCard.addClass("card");
+
                 //Array of recipes
                 var recipesArr = response.hits[i].recipe
 
@@ -39,22 +45,43 @@ $(document).ready(function () {
                 var recipesImage = response.hits[i].recipe.image
                 var $newImage = $("<img>");
                 $newImage.attr("src", recipesImage);
-                console.log("Recipe Image ---------------")
-                console.log(recipesImage)
-                
+
                 //Variable for the name of recipe
+                var $newTitle = $("<span>")
+                $newTitle.addClass("card-title");
                 var recipesName = recipesArr.label
-                console.log("Recipe Name ---------------")
-                console.log(recipesName)
+                $newTitle.text(recipesName);
+
+                //Box for the image
+                var $imageBox = $("<div>")
+                $imageBox.addClass("card-image");
+
+                //Add the content of Image and text
+                $imageBox.append($newImage)
+                $imageBox.append($newTitle)
+
+                //Show everything in the document
+                $newDivCard.append($imageBox)
+
+                //variable to show            
+
+                var $cardContent = $("<div>");
+                $cardContent.addClass("card-content");
 
                 //For loop that goes through the ingredients of each recipe
-                $("#recipeContainer").append($newImage)
-                $("#recipeContainer").append("<div>" + recipesName + "</div>");
                 for (var g = 0; g < recipesArr.ingredients.length; g++) {
                     var recipesIngredients = recipesArr.ingredients[g].text
-                    $("#recipeContainer").append("<div>" + recipesIngredients + "</div>");
-                    console.log(recipesIngredients)
+                    
+                    var $ingredientDiv = $("<div>")
+                    $ingredientDiv.append(recipesIngredients);
+
+                    $cardContent.append($ingredientDiv)
+                    $newDivCard.append($ingredientDiv)
+
                 }
+
+
+                $("#recipeContainer").append($newDivCard)
             }
 
 
@@ -118,14 +145,14 @@ $(document).ready(function () {
                 }
 
                 //when you click the button display it links to the page on wallmart
-                $(".walmart-button").on("click",function(event){
+                $(".walmart-button").on("click", function (event) {
                     window.location = $(this).attr('href')
                 })
 
             }
 
 
-        
+
 
 
 
