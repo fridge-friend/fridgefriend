@@ -1,5 +1,15 @@
-/* Backgroud color */
-/* Create padding for Searchbar */
-.searchBar{
-    padding: 10px;
+.container {
+    margin: 100px;
+    border: solid;
+}
+
+.card {
+    width: 100px;
+    height: 400px;
+    margin: .3rem 0 1rem 0;
+}
+
+.card-image{
+    width: 200px;
+    height: 200px;
 }

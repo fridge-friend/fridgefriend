@@ -34,9 +34,10 @@ $(document).ready(function () {
             for (var i = 0; i < recipeSearch.length; i++) {
                 //Card div that has all the content
                 var $newDivCard = $("<div>");
-                $newDivCard.addClass("row");
-                $newDivCard.addClass("col s12 m6");
                 $newDivCard.addClass("card");
+                $newDivCard.addClass("styleCard");
+                $newDivCard.addClass("col s4 m4");
+                
 
                 //Array of recipes
                 var recipesArr = response.hits[i].recipe
@@ -45,6 +46,7 @@ $(document).ready(function () {
                 var recipesImage = response.hits[i].recipe.image
                 var $newImage = $("<img>");
                 $newImage.attr("src", recipesImage);
+              
 
                 //Variable for the name of recipe
                 var $newTitle = $("<span>")
@@ -70,13 +72,17 @@ $(document).ready(function () {
 
                 //For loop that goes through the ingredients of each recipe
                 for (var g = 0; g < recipesArr.ingredients.length; g++) {
+
+                    //Search the ingredients on the Array
                     var recipesIngredients = recipesArr.ingredients[g].text
+        
                     
+                    //We create a div to show each ingredient on a list
                     var $ingredientDiv = $("<div>")
                     $ingredientDiv.append(recipesIngredients);
 
                     $cardContent.append($ingredientDiv)
-                    $newDivCard.append($ingredientDiv)
+                    $newDivCard.append($cardContent)
 
                 }
 
