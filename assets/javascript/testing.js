@@ -38,7 +38,7 @@ $(document).ready(function () {
                 var $newDivCard = $("<div>");
                 $newDivCard.addClass("card");
                 $newDivCard.addClass("styleCard");
-                $newDivCard.addClass("col s6");
+                $newDivCard.addClass("col s12");
                 $newDivCard.addClass("m3");
 
 

@@ -1,32 +1,18 @@
 .styleCard{
     float: left;
-    margin: 3rem;
+    margin: 2rem;
+    width: 60%;
+}
+.span{
+color: black;
 }
 
-@media only screen and (max-width:980px) {
-    #recipeContainer {
-        max-width: 100%;
-    }
- }
- 
- @media only screen and (max-width:768px) {
-    #recipeContainer {
-        max-width: 100%;
-    
-    }
-}
- 
- @media only screen and (max-width: 640px) { 
-    #recipeContainer{
-        max-width: 100%;
-   
-    }
- }
 
 #ingredient-form {
     margin: 0px auto;
     float: none;
     width: 1075px;
+    background-color: white;
  }
  #ingredientBox{
     margin-top: 20px; 
@@ -41,4 +27,25 @@
     margin: 0px auto;
     float: none;
     text-align: center;
+ }
+
+ #ingredient-input{
+    color: black;
+    font-size: 30px;
+ }
+ 
+ body{
+    color: white;
+    background-color: blueviolet;
+    font-family: 'Roboto', sans-serif;
+ } 
+
+ .walmart-button{
+    background-color:  #FFD293;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 40px;
+    box-shadow: 5px 5px;
+    margin-bottom: 10px;
  }
