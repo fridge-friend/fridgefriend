@@ -1,7 +1,27 @@
 .styleCard{
-    margin:.5rem 2rem 1rem 0;
+    float: left;
+    margin: 3rem;
 }
 
+@media only screen and (max-width:980px) {
+    #recipeContainer {
+        max-width: 100%;
+    }
+ }
+ 
+ @media only screen and (max-width:768px) {
+    #recipeContainer {
+        max-width: 100%;
+    
+    }
+}
+ 
+ @media only screen and (max-width: 640px) { 
+    #recipeContainer{
+        max-width: 100%;
+   
+    }
+ }
 
 #ingredient-form {
     margin: 0px auto;

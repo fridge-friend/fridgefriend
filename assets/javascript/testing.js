@@ -38,7 +38,7 @@ $(document).ready(function () {
                 var $newDivCard = $("<div>");
                 $newDivCard.addClass("card");
                 $newDivCard.addClass("styleCard");
-                $newDivCard.addClass("col s3");
+                $newDivCard.addClass("col s6");
                 $newDivCard.addClass("m3");
 
 
@@ -82,7 +82,7 @@ $(document).ready(function () {
 
 
                     //We create a div to show each ingredient on a list
-                    var $ingredientDiv = $("<div>")
+                    var $ingredientDiv = $("<ul>")
                     $ingredientDiv.append(recipesIngredients);
 
                     $cardContent.append($ingredientDiv)
