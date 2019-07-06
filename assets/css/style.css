@@ -12,8 +12,14 @@ color: black;
     margin: 0px auto;
     float: none;
     width: 1075px;
-    background-color: white;
+    background-color: #9D94FD;
  }
+
+ .input-field label {
+    color: #000;
+}
+
+
  #ingredientBox{
     margin-top: 20px; 
  }
@@ -36,9 +42,12 @@ color: black;
  
  body{
     color: white;
-    background-color: blueviolet;
+    background-color: #9D94FD;
     font-family: 'Roboto', sans-serif;
  } 
+ .card-content{
+     color: #000;
+ }
 
  .walmart-button{
     background-color:  #FFD293;
