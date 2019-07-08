@@ -13,8 +13,8 @@ $(document).ready(function () {
     $("#ingredient-form").submit(function (event) { // Search bar uses return key to search, so not sure if ".material-icons" is correct. 
         event.preventDefault();
         var ingredient = $("#ingredient-input").val().trim();
-        var queryURLEdamam = "https://api.edamam.com/search?q=" + ingredient + "&app_id=26194528&app_key=be9ed2ffac6143f2a60323088693f678&from=0&to=3&calories=591-722&health=alcohol-free"
-        console.log("user Slection :" + ingredient);
+        var queryURLEdamam = "https://api.edamam.com/search?q=" + ingredient + "&app_id=26194528&app_key=be9ed2ffac6143f2a60323088693f678&from=0&to=6&calories=591-722&health=alcohol-free"
+        
         $.ajax({
             url: queryURLEdamam,
             method: "GET"
@@ -25,13 +25,13 @@ $(document).ready(function () {
             console.log("EDAMAM: ")
             console.log(response)
 
-
-
             var recipeSearch = JSON.stringify(response.hits)
-            console.log(recipeSearch)
+            
 
+            //Make sure the recipe exists
             $("#recipeContainer").empty();
             $("#walmartContainer").empty();
+
             //For loop that goes through all the recipes
             for (var i = 0; i < recipeSearch.length; i++) {
                 //Card div that has all the content
@@ -136,8 +136,6 @@ $(document).ready(function () {
 
                     //Link to cart 
                     var cartLink = response.items[j].addToCartUrl
-                    console.log("Links-----")
-                    console.log(cartLink)
                     $newButton.attr('href', cartLink);
 
                     $newButton.addClass("walmart-button")
