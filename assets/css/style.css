@@ -1,0 +1,60 @@
+.styleCard{
+    float: left;
+    margin: 2rem;
+    width: 60%;
+}
+.span{
+color: black;
+}
+
+
+#ingredient-form {
+    margin: 0px auto;
+    float: none;
+    width: 1075px;
+    background-color: #9D94FD;
+ }
+
+ .input-field label {
+    color: #000;
+}
+
+
+ #ingredientBox{
+    margin-top: 20px; 
+ }
+ 
+ #landingGif{
+    width: 100%;
+    margin: 0px auto;
+    float: none;
+ }
+ .instructionsText{
+    margin: 0px auto;
+    float: none;
+    text-align: center;
+ }
+
+ #ingredient-input{
+    color: black;
+    font-size: 30px;
+ }
+ 
+ body{
+    color: white;
+    background-color: #9D94FD;
+    font-family: 'Roboto', sans-serif;
+ } 
+ .card-content{
+     color: #000;
+ }
+
+ .walmart-button{
+    background-color:  #FFD293;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 40px;
+    box-shadow: 5px 5px;
+    margin-bottom: 10px;
+ }
